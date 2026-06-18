@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>MatchMind</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+
+        <!-- NAV -->
+        <nav class="nav">
+            <a href="#" class="nav-logo">Match<span>Mind</span></a>
+            <ul class="nav-links">
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">Leagues</a></li>
+                <li><a href="#">Predictions</a></li>
+            </ul>
+        </nav>
+
+        <!-- HERO -->
+        <header class="hero">
+            <div class="hero-content">
+                <p class="hero-eyebrow">AI-Powered Football Analytics</p>
+                <h1 class="hero-title">Read the game<br />before it's
+                    played.</h1>
+                <p class="hero-sub">Live fixtures, standings, and AI predictions
+                    across Europe's top leagues.</p>
+            </div>
+            <div class="hero-stat-bar">
+                <div class="stat"><span class="stat-num">6</span><span
+                        class="stat-label">Leagues</span></div>
+                <div class="stat-divider"></div>
+                <div class="stat"><span class="stat-num">AI</span><span
+                        class="stat-label">Predictions</span></div>
+                <div class="stat-divider"></div>
+                <div class="stat"><span class="stat-num">Live</span><span
+                        class="stat-label">Fixture Data</span></div>
+            </div>
+        </header>
+
+        <!-- LEAGUE STRIPS -->
+        <main class="main">
+            <h2 class="section-title">Upcoming Fixtures</h2>
+            <div class="leagues" id="leagues-container">
+                <!-- Rendered by app.js -->
+            </div>
+        </main>
+
+        <script src="app.js"></script>
+    </body>
+</html>
