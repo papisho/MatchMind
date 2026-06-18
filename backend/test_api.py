@@ -1,5 +1,6 @@
 
 from football_service import get_fixtures, get_standings
+import time 
 
 leagues = {
     "PL": 39,
@@ -16,7 +17,4 @@ for name, league_id in leagues.items():
     print(f"\n--- {name} fixtures ---")
     data = get_fixtures(league_id, season)
     print(data)
-
-    print(f"\n--- {name} standings ---")
-    data = get_standings(league_id, season)
-    print(data)
+    time.sleep(1)  # Sleep to avoid hitting API rate limits
