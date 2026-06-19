@@ -52,8 +52,13 @@ function buildLeagueStrip(leagueName, fixtures) {
   const list = document.createElement("div");
   list.className = "fixture-list";
 
-  // Show only the first 3 upcoming fixtures
-  fixtures.slice(0, 3).forEach(f => list.appendChild(buildFixtureCard(f)));
+  //Filter for upcoming fixtures (status "NS") and show only the first 3
+  //const upcoming = fixtures.filter(f => f.fixture.status.short === "NS");
+  //upcoming.slice(0, 3).forEach(f => list.appendChild(buildFixtureCard(f)));
+
+  const upcoming = fixtures.filter(f => f.fixture.status.short === "FT");
+  const recent = upcoming.slice(-3); // Get the last 3 finished matches
+  recent.forEach(f => list.appendChild(buildFixtureCard(f)));
 
   strip.appendChild(header);
   strip.appendChild(list);
